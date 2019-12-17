@@ -1,0 +1,3 @@
+RewriteEngine On    # Turn on the rewriting engine
+RewriteCond %{REQUEST_URI} !\.(jpg|png|css|js|php)$
+RewriteRule   ^([^/]+)/([^/]+)$    menu.php?loadpage=$1_$2&%{QUERY_STRING}    [NC,L] 
